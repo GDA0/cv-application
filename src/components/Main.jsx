@@ -1,7 +1,3 @@
 export default function Main () {
-    return (
-        <main>
-            
-        </main>
-    )
+  return <main className='flex-grow-1' />
 }
