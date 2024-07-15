@@ -3,6 +3,45 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import { useState } from 'react'
 
+const initialState = {
+  personalInformation: {
+    fullName: '',
+    profession: '',
+    bio: '',
+    address: '',
+    city: '',
+    region: '',
+    country: '',
+    portfolioWebsite: '',
+    phoneNumber: '',
+    email: '',
+    linkedinProfile: '',
+    xProfile: '',
+    skills: '',
+    languages: '',
+    interests: ''
+  },
+  experience: {
+    jobTitle: '',
+    companyName: '',
+    experienceFrom: '',
+    experienceTo: '',
+    experienceDescription: ''
+  },
+  education: {
+    degree: '',
+    institution: '',
+    educationFrom: '',
+    educationTo: '',
+    educationDescription: ''
+  },
+  projects: {
+    title: '',
+    projectDescription: '',
+    technologiesUsed: ''
+  }
+}
+
 const template = {
   personalInformation: {
     fullName: 'Gideon Delali Adeti',
@@ -92,9 +131,16 @@ export default function App () {
     setProjects(template.projects)
   }
 
+  function removeTemplate () {
+    setPersonalInformation(initialState.personalInformation)
+    setExperience(initialState.experience)
+    setEducation(initialState.education)
+    setProjects(initialState.projects)
+  }
+
   return (
     <div className='d-flex flex-column min-vh-100 container'>
-      <Header addTemplate={addTemplate} />
+      <Header addTemplate={addTemplate} removeTemplate={removeTemplate} />
       <Main
         personalInformation={personalInformation}
         setPersonalInformation={setPersonalInformation}
