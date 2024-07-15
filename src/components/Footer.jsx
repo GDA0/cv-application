@@ -1,6 +1,6 @@
 export default function Footer () {
   return (
-    <footer className='text-center p-3'>
+    <footer className='text-center p-3 fixed-bottom bg-white'>
       <p className='mb-0'>
         &copy; {new Date().getFullYear()} CV Application. Created By{' '}
         <a
