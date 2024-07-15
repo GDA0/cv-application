@@ -9,7 +9,11 @@ function formatDate (inputDate) {
   return format(parseISO(inputDate), 'MMM yyyy')
 }
 
-export default function CVPreviewer ({ personalInformation, experience }) {
+export default function CVPreviewer ({
+  personalInformation,
+  experience,
+  education
+}) {
   return (
     <section className='col col-md-7'>
       <div className='cv-previewer border row rounded sticky-top'>
@@ -111,17 +115,15 @@ export default function CVPreviewer ({ personalInformation, experience }) {
             <h5>EDUCATION</h5>
             <div className='row'>
               <div className='col col-md-3'>
-                <span>Sep 2024</span> - <span>Sep 2028</span>
+                <span>{formatDate(education.educationFrom)}</span> -{' '}
+                <span>{formatDate(education.educationTo)}</span>
               </div>
               <div className='col col-md-9'>
                 <div className='fw-bold'>
-                  <span>All Nations University</span> |{' '}
-                  <span>Bachelor of Engineering in Biomedical Engineering</span>
+                  <span>{education.institution}</span> |{' '}
+                  <span>{education.degree}</span>
                 </div>
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Delectus facilis ex quae.
-                </div>
+                <div>{education.educationDescription}</div>
               </div>
             </div>
           </div>

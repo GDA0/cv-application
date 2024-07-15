@@ -1,4 +1,11 @@
-export default function EducationForm () {
+export default function EducationForm ({ education, setEducation }) {
+  function handleChange (e) {
+    const { name, value } = e.target
+    setEducation((prevState) => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
   return (
     <div className='accordion-item'>
       <h2 className='accordion-header'>
@@ -24,13 +31,27 @@ export default function EducationForm () {
               <label className='form-label' htmlFor='degree'>
                 Degree
               </label>
-              <input type='text' className='form-control' id='degree' />
+              <input
+                type='text'
+                className='form-control'
+                id='degree'
+                name='degree'
+                value={education.degree}
+                onChange={handleChange}
+              />
             </div>
             <div className='mb-3'>
               <label className='form-label' htmlFor='institution'>
                 Institution
               </label>
-              <input type='text' className='form-control' id='institution' />
+              <input
+                type='text'
+                className='form-control'
+                id='institution'
+                name='institution'
+                value={education.institution}
+                onChange={handleChange}
+              />
             </div>
             <div className='mb-3'>
               <label className='form-label' htmlFor='education-from'>
@@ -45,6 +66,9 @@ export default function EducationForm () {
                     type='date'
                     className='form-control'
                     id='education-from'
+                    name='educationFrom'
+                    value={education.educationFrom}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className='col-6'>
@@ -55,6 +79,9 @@ export default function EducationForm () {
                     type='date'
                     className='form-control'
                     id='education-to'
+                    name='educationTo'
+                    value={education.educationTo}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -66,6 +93,9 @@ export default function EducationForm () {
               <textarea
                 className='form-control'
                 id='education-description'
+                name='educationDescription'
+                value={education.educationDescription}
+                onChange={handleChange}
                 style={{ minHeight: '120px' }}
               />
             </div>

@@ -27,6 +27,14 @@ export default function Main () {
     experienceTo: '',
     experienceDescription: ''
   })
+
+  const [education, setEducation] = useState({
+    degree: '',
+    institution: '',
+    educationFrom: '',
+    educationTo: '',
+    educationDescription: ''
+  })
   return (
     <main className='flex-grow-1 row my-5 py-3'>
       <UserInputs
@@ -34,10 +42,13 @@ export default function Main () {
         setPersonalInformation={setPersonalInformation}
         experience={experience}
         setExperience={setExperience}
+        education={education}
+        setEducation={setEducation}
       />
       <CVPreviewer
         personalInformation={personalInformation}
         experience={experience}
+        education={education}
       />
     </main>
   )

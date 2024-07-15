@@ -7,7 +7,9 @@ export function UserInputs ({
   personalInformation,
   setPersonalInformation,
   experience,
-  setExperience
+  setExperience,
+  education,
+  setEducation
 }) {
   return (
     <section className='col col-md-5'>
@@ -17,7 +19,7 @@ export function UserInputs ({
           setPersonalInformation={setPersonalInformation}
         />
         <ExperienceForm experience={experience} setExperience={setExperience} />
-        <EducationForm />
+        <EducationForm education={education} setEducation={setEducation} />
         <ProjectsForm />
       </div>
     </section>
