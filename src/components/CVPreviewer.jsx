@@ -1,7 +1,7 @@
 import ImgSrc from '../assets/images/image-1.jpg'
 import '../assets/CVPreviewer.css'
 
-export default function CVPreviewer () {
+export default function CVPreviewer ({ personalInformation }) {
   return (
     <section className='col col-md-7'>
       <div className='cv-previewer border row rounded sticky-top'>
@@ -20,15 +20,15 @@ export default function CVPreviewer () {
               <div className='other-info'>
                 <div className='mb-5'>
                   <h5>SKILLS</h5>
-                  <p>MongoDB, Express.js, React.js, Node.js</p>
+                  <p>{personalInformation.skills}</p>
                 </div>
                 <div className='mb-5'>
                   <h5>LANGUAGES</h5>
-                  <p>English, Twi, Ewe, French</p>
+                  <p>{personalInformation.languages}</p>
                 </div>
                 <div className='mb-5'>
                   <h5>INTERESTS</h5>
-                  <p>Science, Technology</p>
+                  <p>{personalInformation.interests}</p>
                 </div>
               </div>
             </div>
@@ -36,18 +36,12 @@ export default function CVPreviewer () {
         </div>
         <div className='col col-md-8 p-3'>
           <div className='my-5'>
-            <h1>Gideon Delali Adeti</h1>
-            <h4>Web Developer</h4>
+            <h1>{personalInformation.fullName}</h1>
+            <h4>{personalInformation.profession}</h4>
           </div>
           <div className='my-4'>
             <h5>ABOUT ME</h5>
-            <p>
-              I am a full-stack web developer specializing in the MERN stack
-              (MongoDB, Express.js, React.js, and Node.js). I have a strong
-              understanding of the MERN stack, enabling me to integrate
-              front-end and back-end development for efficient application
-              creation.
-            </p>
+            <p>{personalInformation.bio}</p>
           </div>
           <div className='contact my-4'>
             <h5>CONTACT ME</h5>
@@ -55,21 +49,24 @@ export default function CVPreviewer () {
               <div>
                 <i className='bi bi-pin-map' />
                 <div>
-                  <p>Ahenfie St, Srodae</p>
-                  <p>Koforidua, Eastern, Ghana</p>
+                  <p>{personalInformation.address}</p>
+                  <p>
+                    {personalInformation.city}, {personalInformation.region},{' '}
+                    {personalInformation.country}
+                  </p>
                 </div>
               </div>
               <div>
                 <i className='bi bi-box-arrow-up-right' />
-                <p>https://gda0.github.io/homepage/</p>
+                <p>{personalInformation.portfolioWebsite}</p>
               </div>
               <div>
                 <i className='bi bi-telephone' />
-                <p>+233500181208</p>
+                <p>{personalInformation.phoneNumber}</p>
               </div>
               <div>
                 <i className='bi bi-envelope' />
-                <p>gideondelaliadeti0@gmail.com</p>
+                <p>{personalInformation.email}</p>
               </div>
             </div>
           </div>
@@ -78,11 +75,11 @@ export default function CVPreviewer () {
             <div className='social-profiles'>
               <div>
                 <i className='bi bi-linkedin' />
-                <p>https://www.linkedin.com/in/gideon-delali-adeti/</p>
+                <p>{personalInformation.linkedinProfile}</p>
               </div>
               <div>
                 <i className='bi bi-twitter-x' />
-                <p>https://x.com/g_d_a_0</p>
+                <p>{personalInformation.xProfile}</p>
               </div>
             </div>
           </div>

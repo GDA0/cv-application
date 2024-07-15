@@ -1,4 +1,14 @@
-export default function PersonalInformationForm () {
+export default function PersonalInformationForm ({
+  personalInformation,
+  setPersonalInformation
+}) {
+  function handleChange (e) {
+    const { name, value } = e.target
+    setPersonalInformation((prevState) => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
   return (
     <div className='accordion-item'>
       <h2 className='accordion-header'>
@@ -28,6 +38,9 @@ export default function PersonalInformationForm () {
                 className='form-control'
                 id='full-name'
                 type='text'
+                name='fullName'
+                value={personalInformation.fullName}
+                onChange={handleChange}
                 placeholder='E.g.: Gideon Delali Adeti'
               />
             </div>
@@ -38,6 +51,9 @@ export default function PersonalInformationForm () {
               <input
                 className='form-control'
                 id='profession'
+                name='profession'
+                value={personalInformation.profession}
+                onChange={handleChange}
                 type='text'
                 placeholder='E.g.: Web Developer'
               />
@@ -49,6 +65,9 @@ export default function PersonalInformationForm () {
               <textarea
                 className='form-control'
                 id='bio'
+                name='bio'
+                value={personalInformation.bio}
+                onChange={handleChange}
                 placeholder='E.g.: I am a full-stack web developer specializing in the MERN stack (MongoDB, Express.js, React.js, and Node.js). I have a strong understanding of the MERN stack, enabling me to integrate front-end and back-end development for efficient application creation.'
                 style={{ minHeight: '180px' }}
               />
@@ -62,7 +81,10 @@ export default function PersonalInformationForm () {
                   type='text'
                   className='form-control'
                   id='address'
-                  placeholder='E.g.: Ahenfie St'
+                  name='address'
+                  value={personalInformation.address}
+                  onChange={handleChange}
+                  placeholder='E.g.: Ahenfie St, Srodae'
                 />
               </div>
               <div className='col-4'>
@@ -73,6 +95,9 @@ export default function PersonalInformationForm () {
                   type='text'
                   className='form-control'
                   id='city'
+                  name='city'
+                  value={personalInformation.city}
+                  onChange={handleChange}
                   placeholder='E.g.: Koforidua'
                 />
               </div>
@@ -84,6 +109,9 @@ export default function PersonalInformationForm () {
                   type='text'
                   className='form-control'
                   id='region'
+                  name='region'
+                  value={personalInformation.region}
+                  onChange={handleChange}
                   placeholder='E.g.: Eastern'
                 />
               </div>
@@ -95,6 +123,9 @@ export default function PersonalInformationForm () {
                   type='text'
                   className='form-control'
                   id='country'
+                  name='country'
+                  value={personalInformation.country}
+                  onChange={handleChange}
                   placeholder='E.g.: Ghana'
                 />
               </div>
@@ -106,6 +137,9 @@ export default function PersonalInformationForm () {
                   type='url'
                   className='form-control'
                   id='portfolio-website'
+                  name='portfolioWebsite'
+                  value={personalInformation.portfolioWebsite}
+                  onChange={handleChange}
                   placeholder='E.g.: https://gda0.github.io/homepage/'
                 />
               </div>
@@ -117,6 +151,9 @@ export default function PersonalInformationForm () {
                   type='tel'
                   className='form-control'
                   id='phone-number'
+                  name='phoneNumber'
+                  value={personalInformation.phoneNumber}
+                  onChange={handleChange}
                   placeholder='E.g.: +233500181208'
                 />
               </div>
@@ -128,6 +165,9 @@ export default function PersonalInformationForm () {
                   type='email'
                   className='form-control'
                   id='email'
+                  name='email'
+                  value={personalInformation.email}
+                  onChange={handleChange}
                   placeholder='E.g.: gideondelaliadeti0@gmail.com'
                 />
               </div>
@@ -139,6 +179,9 @@ export default function PersonalInformationForm () {
               <input
                 className='form-control'
                 id='linkedin-profile'
+                name='linkedinProfile'
+                value={personalInformation.linkedinProfile}
+                onChange={handleChange}
                 type='url'
                 placeholder='E.g.: https://www.linkedin.com/in/gideon-delali-adeti/'
               />
@@ -150,6 +193,9 @@ export default function PersonalInformationForm () {
               <input
                 className='form-control'
                 id='x-profile'
+                name='xProfile'
+                value={personalInformation.xProfile}
+                onChange={handleChange}
                 type='url'
                 placeholder='E.g.: https://x.com/g_d_a_0'
               />
@@ -161,6 +207,9 @@ export default function PersonalInformationForm () {
               <input
                 className='form-control'
                 id='skills'
+                name='skills'
+                value={personalInformation.skills}
+                onChange={handleChange}
                 type='text'
                 placeholder='E.g.: MongoDB, Express.js, React.js, Node.js'
               />
@@ -172,6 +221,9 @@ export default function PersonalInformationForm () {
               <input
                 className='form-control'
                 id='languages'
+                name='languages'
+                value={personalInformation.languages}
+                onChange={handleChange}
                 type='text'
                 placeholder='E.g.: English, Twi, Ewe, French'
               />
@@ -183,6 +235,9 @@ export default function PersonalInformationForm () {
               <input
                 className='form-control'
                 id='interests'
+                name='interests'
+                value={personalInformation.interests}
+                onChange={handleChange}
                 type='text'
                 placeholder='E.g.: Science, Technology'
               />
