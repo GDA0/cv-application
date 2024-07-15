@@ -12,7 +12,8 @@ function formatDate (inputDate) {
 export default function CVPreviewer ({
   personalInformation,
   experience,
-  education
+  education,
+  projects
 }) {
   return (
     <section className='col col-md-7'>
@@ -129,21 +130,12 @@ export default function CVPreviewer ({
           </div>
           <div>
             <h5>PROJECTS</h5>
-            <div className='row mb-3'>
-              <div className='col col-md-3'>
-                <span>Jun 2024</span> - <span>Jul 2024</span>
+            <div>
+              <div className='fw-bold'>
+                <span>{projects.title}</span> |{' '}
+                <span>{projects.technologiesUsed}</span>
               </div>
-              <div className='col col-md-9'>
-                <div className='fw-bold'>
-                  <span>CV Application</span> |{' '}
-                  <span>HTML, CSS, JS, React</span>
-                </div>
-                <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit animi soluta ducimus provident veritatis ipsum,
-                  eligendi molestias nihil quasi voluptatibus.
-                </div>
-              </div>
+              <div>{projects.projectDescription}</div>
             </div>
           </div>
         </div>

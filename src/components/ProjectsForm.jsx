@@ -1,4 +1,11 @@
-export default function ProjectsForm () {
+export default function ProjectsForm ({ projects, setProjects }) {
+  function handleChange (e) {
+    const { name, value } = e.target
+    setProjects((prevState) => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
   return (
     <div className='accordion-item'>
       <h2 className='accordion-header'>
@@ -24,7 +31,14 @@ export default function ProjectsForm () {
               <label className='form-label' htmlFor='title'>
                 Title
               </label>
-              <input type='text' className='form-control' id='title' />
+              <input
+                type='text'
+                className='form-control'
+                id='title'
+                name='title'
+                value={projects.title}
+                onChange={handleChange}
+              />
             </div>
             <div className='mb-3'>
               <label htmlFor='project-description' className='form-label'>
@@ -33,6 +47,9 @@ export default function ProjectsForm () {
               <textarea
                 className='form-control'
                 id='project-description'
+                name='projectDescription'
+                value={projects.projectDescription}
+                onChange={handleChange}
                 style={{ minHeight: '120px' }}
               />
             </div>
@@ -44,6 +61,9 @@ export default function ProjectsForm () {
                 type='text'
                 className='form-control'
                 id='technologies-used'
+                name='technologiesUsed'
+                value={projects.technologiesUsed}
+                onChange={handleChange}
               />
             </div>
           </form>
