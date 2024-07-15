@@ -4,7 +4,7 @@ import "../assets/CVPreviewer.css";
 export default function CVPreviewer() {
   return (
     <section className="col col-md-7">
-      <div className="cv-previewer border row rounded">
+      <div className="cv-previewer border row rounded sticky-top">
         <div className="col col-md-4 bg-primary-subtle py-3 px-2 side-info">
           <div className="profile-image mb-5  d-flex flex-column align-items-center">
             <img
