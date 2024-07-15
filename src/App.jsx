@@ -75,7 +75,7 @@ const template = {
     educationFrom: '2024-09-16',
     educationTo: '2028-09-16',
     educationDescription:
-      'Would graduate with honors and focus on biomedical engineering.'
+      'Might focus on biomedical engineering.'
   },
   projects: {
     title: 'CV Application',
