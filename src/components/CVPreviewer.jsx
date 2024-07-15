@@ -21,7 +21,11 @@ export default function CVPreviewer ({
         <div className='col col-md-4 bg-primary-subtle py-3 px-2 side-info'>
           <div className='profile-image mb-5  d-flex flex-column align-items-center'>
             <img
-              src={ImgSrc}
+              src={
+                personalInformation.profileImage
+                  ? personalInformation.profileImage
+                  : ImgSrc
+              }
               alt='Image 1'
               className='img-fluid rounded-circle'
               style={{ width: '150px', height: '150px', objectFit: 'cover' }}

@@ -9,6 +9,16 @@ export default function PersonalInformationForm ({
       [name]: value
     }))
   }
+
+  function handleImageChange (e) {
+    if (e.target.files && e.target.files[0]) {
+      setPersonalInformation((prevState) => ({
+        ...prevState,
+        profileImage: URL.createObjectURL(e.target.files[0])
+      }))
+    }
+  }
+
   return (
     <div className='accordion-item'>
       <h2 className='accordion-header'>
@@ -30,6 +40,18 @@ export default function PersonalInformationForm ({
       >
         <div className='accordion-body'>
           <form className='personal-information-form'>
+            <div className='mb-3'>
+              <label htmlFor='profileImage' className='form-label'>
+                Profile Image
+              </label>
+              <input
+                type='file'
+                className='form-control'
+                id='profileImage'
+                accept='image/*'
+                onChange={handleImageChange}
+              />
+            </div>
             <div className='mb-3'>
               <label className='form-label' htmlFor='full-name'>
                 Full name

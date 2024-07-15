@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 const initialState = {
   personalInformation: {
+    profileImage: '',
     fullName: '',
     profession: '',
     bio: '',
