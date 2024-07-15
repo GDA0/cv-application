@@ -59,6 +59,16 @@ export default function ExperienceForm () {
                 </div>
               </div>
             </div>
+            <div className='mb-3'>
+              <label htmlFor='experience-description' className='form-label'>
+                Description
+              </label>
+              <textarea
+                className='form-control'
+                id='experience-description'
+                style={{ minHeight: '120px' }}
+              />
+            </div>
           </form>
         </div>
       </div>

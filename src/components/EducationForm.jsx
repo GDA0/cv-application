@@ -59,6 +59,16 @@ export default function EducationForm () {
                 </div>
               </div>
             </div>
+            <div className='mb-3'>
+              <label htmlFor='education-description' className='form-label'>
+                Description
+              </label>
+              <textarea
+                className='form-control'
+                id='education-description'
+                style={{ minHeight: '120px' }}
+              />
+            </div>
           </form>
         </div>
       </div>
