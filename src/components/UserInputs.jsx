@@ -1,6 +1,7 @@
 import PersonalInformationForm from './PersonalInformationForm'
 import ExperienceForm from './ExperienceForm'
 import EducationForm from './EducationForm'
+import ProjectsForm from './ProjectsForm'
 
 export default function UserInputs () {
   return (
@@ -9,6 +10,7 @@ export default function UserInputs () {
         <PersonalInformationForm />
         <ExperienceForm />
         <EducationForm />
+        <ProjectsForm />
       </div>
     </section>
   )
