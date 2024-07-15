@@ -1,4 +1,4 @@
-export default function ExperienceForm () {
+export default function EducationForm () {
   return (
     <div className='accordion-item'>
       <h2 className='accordion-header'>
@@ -6,55 +6,55 @@ export default function ExperienceForm () {
           className='accordion-button'
           type='button'
           data-bs-toggle='collapse'
-          data-bs-target='#experience-form-container'
+          data-bs-target='#education-form-container'
           aria-expanded='true'
-          aria-controls='experience-form-container'
+          aria-controls='education-form-container'
         >
-          Experience
+          Education
         </button>
       </h2>
       <div
-        id='experience-form-container'
+        id='education-form-container'
         className='accordion-collapse collapse show'
         data-bs-parent='#user-inputs'
       >
         <div className='accordion-body'>
-          <form className='experience-form'>
+          <form className='education-form'>
             <div className='mb-3'>
-              <label className='form-label' htmlFor='job-title'>
-                Job title
+              <label className='form-label' htmlFor='degree'>
+                Degree
               </label>
-              <input type='text' className='form-control' id='job-title' />
+              <input type='text' className='form-control' id='degree' />
             </div>
             <div className='mb-3'>
-              <label className='form-label' htmlFor='company-name'>
-                Company name
+              <label className='form-label' htmlFor='institution'>
+                Institution
               </label>
-              <input type='text' className='form-control' id='company-name' />
+              <input type='text' className='form-control' id='institution' />
             </div>
             <div className='mb-3'>
-              <label className='form-label' htmlFor='experience-from'>
-                Dates of Employment
+              <label className='form-label' htmlFor='education-from'>
+                Dates of education
               </label>
               <div className='row'>
                 <div className='col-6'>
-                  <label htmlFor='experience-from' className='form-label'>
+                  <label htmlFor='education-from' className='form-label'>
                     From
                   </label>
                   <input
                     type='date'
                     className='form-control'
-                    id='experience-from'
+                    id='education-from'
                   />
                 </div>
                 <div className='col-6'>
-                  <label htmlFor='experience-to' className='form-label'>
+                  <label htmlFor='education-to' className='form-label'>
                     To
                   </label>
                   <input
                     type='date'
                     className='form-control'
-                    id='experience-to'
+                    id='education-to'
                   />
                 </div>
               </div>

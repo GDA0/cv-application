@@ -1,5 +1,6 @@
 import PersonalInformationForm from './PersonalInformationForm'
 import ExperienceForm from './ExperienceForm'
+import EducationForm from './EducationForm'
 
 export default function UserInputs () {
   return (
@@ -7,6 +8,7 @@ export default function UserInputs () {
       <div className='accordion' id='user-inputs'>
         <PersonalInformationForm />
         <ExperienceForm />
+        <EducationForm />
       </div>
     </section>
   )
