@@ -3,7 +3,12 @@ import ExperienceForm from './ExperienceForm'
 import EducationForm from './EducationForm'
 import ProjectsForm from './ProjectsForm'
 
-export function UserInputs ({ personalInformation, setPersonalInformation }) {
+export function UserInputs ({
+  personalInformation,
+  setPersonalInformation,
+  experience,
+  setExperience
+}) {
   return (
     <section className='col col-md-5'>
       <div className='accordion user-inputs' id='user-inputs'>
@@ -11,7 +16,7 @@ export function UserInputs ({ personalInformation, setPersonalInformation }) {
           personalInformation={personalInformation}
           setPersonalInformation={setPersonalInformation}
         />
-        <ExperienceForm />
+        <ExperienceForm experience={experience} setExperience={setExperience} />
         <EducationForm />
         <ProjectsForm />
       </div>

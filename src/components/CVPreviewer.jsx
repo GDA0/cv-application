@@ -1,7 +1,15 @@
+import { format, parseISO } from 'date-fns'
+
 import ImgSrc from '../assets/images/image-1.jpg'
 import '../assets/CVPreviewer.css'
 
-export default function CVPreviewer ({ personalInformation }) {
+// Function to convert date input value to "MMM yyyy" format
+function formatDate (inputDate) {
+  if (!inputDate) return ''
+  return format(parseISO(inputDate), 'MMM yyyy')
+}
+
+export default function CVPreviewer ({ personalInformation, experience }) {
   return (
     <section className='col col-md-7'>
       <div className='cv-previewer border row rounded sticky-top'>
@@ -87,17 +95,15 @@ export default function CVPreviewer ({ personalInformation }) {
             <h5>EXPERIENCE</h5>
             <div className='row'>
               <div className='col col-md-3'>
-                <span>Jan 2021</span> - <span>Jul 2024</span>
+                <span>{formatDate(experience.experienceFrom)}</span> -{' '}
+                <span>{formatDate(experience.experienceTo)}</span>
               </div>
               <div className='col col-md-9'>
                 <div className='fw-bold'>
-                  <span>Self-employed</span> | <span>Web Developer</span>
+                  <span>{experience.companyName}</span> |{' '}
+                  <span>{experience.jobTitle}</span>
                 </div>
-                <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit animi soluta ducimus provident veritatis ipsum,
-                  eligendi molestias nihil quasi voluptatibus.
-                </div>
+                <div>{experience.experienceDescription}</div>
               </div>
             </div>
           </div>

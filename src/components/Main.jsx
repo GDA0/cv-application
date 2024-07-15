@@ -19,13 +19,26 @@ export default function Main () {
     skills: '',
     interests: ''
   })
+
+  const [experience, setExperience] = useState({
+    jobTitle: '',
+    companyName: '',
+    experienceFrom: '',
+    experienceTo: '',
+    experienceDescription: ''
+  })
   return (
     <main className='flex-grow-1 row my-5 py-3'>
       <UserInputs
         personalInformation={personalInformation}
         setPersonalInformation={setPersonalInformation}
+        experience={experience}
+        setExperience={setExperience}
       />
-      <CVPreviewer personalInformation={personalInformation} />
+      <CVPreviewer
+        personalInformation={personalInformation}
+        experience={experience}
+      />
     </main>
   )
 }

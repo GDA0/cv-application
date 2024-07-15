@@ -1,4 +1,12 @@
-export default function ExperienceForm () {
+export default function ExperienceForm ({ experience, setExperience }) {
+  function handleChange (e) {
+    const { name, value } = e.target
+    setExperience((prevState) => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
   return (
     <div className='accordion-item'>
       <h2 className='accordion-header'>
@@ -24,13 +32,27 @@ export default function ExperienceForm () {
               <label className='form-label' htmlFor='job-title'>
                 Job title
               </label>
-              <input type='text' className='form-control' id='job-title' />
+              <input
+                type='text'
+                className='form-control'
+                id='job-title'
+                name='jobTitle'
+                value={experience.jobTitle}
+                onChange={handleChange}
+              />
             </div>
             <div className='mb-3'>
               <label className='form-label' htmlFor='company-name'>
                 Company name
               </label>
-              <input type='text' className='form-control' id='company-name' />
+              <input
+                type='text'
+                className='form-control'
+                id='company-name'
+                name='companyName'
+                value={experience.companyName}
+                onChange={handleChange}
+              />
             </div>
             <div className='mb-3'>
               <label className='form-label' htmlFor='experience-from'>
@@ -45,6 +67,9 @@ export default function ExperienceForm () {
                     type='date'
                     className='form-control'
                     id='experience-from'
+                    name='experienceFrom'
+                    value={experience.experienceFrom}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className='col-6'>
@@ -55,6 +80,9 @@ export default function ExperienceForm () {
                     type='date'
                     className='form-control'
                     id='experience-to'
+                    name='experienceTo'
+                    value={experience.experienceTo}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -66,6 +94,9 @@ export default function ExperienceForm () {
               <textarea
                 className='form-control'
                 id='experience-description'
+                name='experienceDescription'
+                value={experience.experienceDescription}
+                onChange={handleChange}
                 style={{ minHeight: '120px' }}
               />
             </div>
