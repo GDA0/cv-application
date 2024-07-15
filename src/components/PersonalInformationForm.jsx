@@ -132,6 +132,61 @@ export default function PersonalInformationForm () {
                 />
               </div>
             </div>
+            <div className='mb-3'>
+              <label className='form-label' htmlFor='linkedin-profile'>
+                LinkedIn Profile
+              </label>
+              <input
+                className='form-control'
+                id='linkedin-profile'
+                type='url'
+                placeholder='E.g.: https://www.linkedin.com/in/gideon-delali-adeti/'
+              />
+            </div>
+            <div className='mb-3'>
+              <label className='form-label' htmlFor='x-profile'>
+                X Profile
+              </label>
+              <input
+                className='form-control'
+                id='x-profile'
+                type='url'
+                placeholder='E.g.: https://x.com/g_d_a_0'
+              />
+            </div>
+            <div className='mb-3'>
+              <label className='form-label' htmlFor='skills'>
+                Skills
+              </label>
+              <input
+                className='form-control'
+                id='skills'
+                type='text'
+                placeholder='E.g.: MongoDB, Express.js, React.js, Node.js'
+              />
+            </div>
+            <div className='mb-3'>
+              <label className='form-label' htmlFor='languages'>
+                Languages
+              </label>
+              <input
+                className='form-control'
+                id='languages'
+                type='text'
+                placeholder='E.g.: English, Twi, Ewe, French'
+              />
+            </div>
+            <div className='mb-3'>
+              <label className='form-label' htmlFor='interests'>
+                Interests
+              </label>
+              <input
+                className='form-control'
+                id='interests'
+                type='text'
+                placeholder='E.g.: Science, Technology'
+              />
+            </div>
           </form>
         </div>
       </div>
