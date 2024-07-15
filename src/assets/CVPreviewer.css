@@ -1,0 +1,12 @@
+.contact-information p,
+.social-profiles p {
+  margin-bottom: 0;
+}
+.contact-information > div,
+.social-profiles > div {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/*# sourceMappingURL=CVPreviewer.css.map */

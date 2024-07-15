@@ -3,10 +3,10 @@ import ExperienceForm from './ExperienceForm'
 import EducationForm from './EducationForm'
 import ProjectsForm from './ProjectsForm'
 
-export default function UserInputs () {
+export function UserInputs () {
   return (
     <section className='col col-md-5'>
-      <div className='accordion' id='user-inputs'>
+      <div className='accordion user-inputs' id='user-inputs'>
         <PersonalInformationForm />
         <ExperienceForm />
         <EducationForm />

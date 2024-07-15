@@ -1,4 +1,4 @@
-import UserInputs from './UserInputs'
+import { UserInputs } from './UserInputs'
 import CVPreviewer from './CVPreviewer'
 
 export default function Main () {
