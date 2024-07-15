@@ -49,8 +49,8 @@ export default function PersonalInformationForm () {
               <textarea
                 className='form-control'
                 id='bio'
-                placeholder="E.g.: I'm a full-stack web developer specializing in the MERN stack (MongoDB, Express.js, React.js, and Node.js). I have a strong understanding of the MERN stack, enabling me to integrate front-end and back-end development for efficient application creation. My self-directed learning background has fostered a strong work ethic and a love for continuous improvement. Moreover, I thrive in collaborative environments, eager to learn and contribute."
-                style={{ minHeight: '240px' }}
+                placeholder='E.g.: I am a full-stack web developer specializing in the MERN stack (MongoDB, Express.js, React.js, and Node.js). I have a strong understanding of the MERN stack, enabling me to integrate front-end and back-end development for efficient application creation.'
+                style={{ minHeight: '180px' }}
               />
             </div>
             <div className='mb-3 row g-3'>
